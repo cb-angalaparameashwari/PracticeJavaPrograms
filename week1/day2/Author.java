@@ -2,9 +2,9 @@ package week1.day2;
 import java.util.Scanner;
 
 public class Author{
-		String authorName;
-		String authorEmail;
-		char authorGender;
+		private String authorName;
+		private String authorEmail;
+		private char authorGender;
 	
 	public Author (String authorName, String authorEmail, char authorGender){
 		this.authorName = authorName;
@@ -36,6 +36,7 @@ public class Author{
 		System.out.println(objAuthor.toDisplay());
 		objAuthor.setEmail();
 		System.out.println(objAuthor.toDisplay());
+		System.out.println("Author name and mail id :" + objAuthor.getName() + objAuthor.getEmail());
 
 	}
 

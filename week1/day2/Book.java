@@ -1,12 +1,13 @@
 package week1.day2;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Book{
-		String bookName;
-		static ArrayList<String> authorNames = new ArrayList<String>();
-		double bookPrice;
-		int qtyInStock = 0 ;
+		private String bookName;
+		ArrayList<String> authorNames = new ArrayList<String>(Arrays.asList("Rowling","HP"));
+		private double bookPrice;
+		private int qtyInStock = 0 ;
 
 	public Book (String bookName, ArrayList<String> authorNames,double bookPrice, int qtyInStock){
 		this.bookName = bookName;
@@ -51,13 +52,12 @@ public class Book{
 	}
 
 	public static void main(String args[]){
-		authorNames.add("Rowling");
-		authorNames.add("HP");
 		Book objBook = new Book ("HP",authorNames,100,4);
 		objBook.setPrice();
 		objBook.setQTY();
 		objBook.printAuthors();
 		objBook.toDisplay();
+		System.out.println(objBook.getName());
 
 	}
 }
