@@ -8,20 +8,18 @@ public class MathUtilsPow{
 
 	public static void findMinPower(int baseValue,int maxResult)
 	{
+		int iterator_MinPower = 0 ;
 		double maxPower = Double.MIN_VALUE; // initialize maxPower with Min Value
 		if(baseValue == 0)
 		{
 			System.out.println("Result is always 1 since the base value is 0"); // Display the result when base value is 0
 		}
 		else
-		for(int iterator_MinPower= 0 ; ; iterator_MinPower++)
+		while(maxPower <= maxResult) 
 		{
-			 maxPower = Math.pow(baseValue,iterator_MinPower); // Fine Power
-			 if(maxPower > maxResult)  // Compare the actual result with the expected Max Value
-			 {
-			 	System.out.println("Maximum power value is " + iterator_MinPower);  // Display the min Power
-				break;
-			 }
+			 maxPower = Math.pow(baseValue,iterator_MinPower); // Find Power
+			 iterator_MinPower++;
 		}
+		System.out.println("Maximum power value is " + iterator_MinPower);
 	}
 }

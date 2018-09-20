@@ -11,7 +11,7 @@ public class MaxAndMinArray{
 		int arraySize = sc.nextInt();
         //Get Array Elements
         System.out.println("Enter Array Elements");
-        Integer[] inputArray = new Integer[arraySize];
+        int[] inputArray = new int[arraySize];
         for(int iterator= 0 ; iterator <arraySize ; iterator++)
         {
         	inputArray[iterator] = sc.nextInt();
@@ -20,7 +20,7 @@ public class MaxAndMinArray{
         findSmallest(inputArray);
     }
     // Find the largets element in the array
-    public static void findLargest(Integer[] arr) 
+    public static void findLargest(int[] arr) 
     {
     	//sorting array
         Arrays.sort(arr); 
@@ -28,7 +28,7 @@ public class MaxAndMinArray{
     System.out.println("Largest value is " + arr[arr.length-1]);
     } 
     // Find the smallest element in the array.
-    public static void findSmallest(Integer[] arr) 
+    public static void findSmallest(int[] arr) 
     {
     	//Sorting the array
         Arrays.sort(arr); 
